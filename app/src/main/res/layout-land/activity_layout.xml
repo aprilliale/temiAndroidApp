@@ -39,25 +39,28 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/startButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/start_button"
+                app:srcCompat="@drawable/start_button_state"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:background="@null"/>
 
             <ImageButton
+                android:id="@+id/settingButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/setting_button"
+                app:srcCompat="@drawable/setting_button_state"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 android:background="@null"/>
 
             <ImageButton
+                android:id="@+id/exitButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/exit_button"
+                app:srcCompat="@drawable/exit_button_state"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@null"/>
