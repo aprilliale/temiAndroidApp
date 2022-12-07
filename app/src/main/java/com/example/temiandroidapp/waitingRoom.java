@@ -9,17 +9,13 @@ import android.widget.TextView;
 
 public class waitingRoom extends AppCompatActivity {
 
-    TextView idNum;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting_room);
 
-        idNum = findViewById(R.id.textSetUp);
-        Intent i = getIntent();
-        String ipNum = i.getStringExtra("ip_number");
-        idNum.setText(ipNum+" Please select your team!");
     }
 
     @Override

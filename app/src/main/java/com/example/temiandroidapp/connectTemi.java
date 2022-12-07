@@ -1,41 +1,43 @@
 package com.example.temiandroidapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-public class login extends AppCompatActivity {
-
-    ImageButton nextLogin;
-    EditText insertIP;
+public class connectTemi extends AppCompatActivity {
+    TextView idNum;
+    ImageButton nextbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_connect_temi);
 
-        loginButtonListener();
+        idNum = findViewById(R.id.textSetUp);
+        Intent i = getIntent();
+        String ipNum = i.getStringExtra("ip_number");
+        idNum.setText(ipNum+" Please select your team!");
+
+        nextButtonOnListener();
     }
 
-    private void loginButtonListener() {
-        nextLogin = findViewById(R.id.buttonLogin);
-        insertIP = findViewById(R.id.insertIP);
+    private void nextButtonOnListener() {
+        nextbutton = findViewById(R.id.nextButton);
 
-        nextLogin.setOnClickListener(new View.OnClickListener() {
+        nextbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String ip = insertIP.getText().toString();
-                Intent i = new Intent(login.this, connectTemi.class);
-                i.putExtra("ip_number", ip);
+                Intent i = new Intent(connectTemi.this, waitingRoom.class);
                 startActivity(i);
             }
         });
+
     }
 
     @Override

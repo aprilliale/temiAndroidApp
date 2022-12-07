@@ -14,6 +14,9 @@
         android:theme="@style/Theme.TemiAndroidApp"
         tools:targetApi="31">
         <activity
+            android:name=".connectTemi"
+            android:exported="false" />
+        <activity
             android:name=".waitingRoom"
             android:exported="false" />
         <activity
