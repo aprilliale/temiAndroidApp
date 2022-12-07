@@ -23,15 +23,15 @@ public class MainActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(R.layout.activity_layout);
 
-        addListenerOnButton();
+        addListenerOnButton(); //button function
     }
 
     // BUTTON CODE
     private void addListenerOnButton() {
 
-        startButton = (ImageButton) findViewById(R.id.startButton);
-        settingButton = (ImageButton) findViewById(R.id.settingButton);
-        exitButton = (ImageButton) findViewById(R.id.exitButton);
+        startButton = findViewById(R.id.startButton);
+        settingButton = findViewById(R.id.settingButton);
+        exitButton = findViewById(R.id.exitButton);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                         setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                MainActivity.super.onBackPressed();
+                                finish();
+                                System.exit(0);
                             }
                         }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
