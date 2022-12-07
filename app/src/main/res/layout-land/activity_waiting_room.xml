@@ -31,18 +31,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="20dp">
 
-                <Button
+                <ImageButton
                     android:id="@+id/redTeam"
-                    android:layout_width="400px"
-                    android:layout_height="400px"/>
+                    android:layout_width="340px"
+                    android:layout_height="340px"
+                    android:backgroundTint="@android:color/transparent"
+                    app:srcCompat="@drawable/red_button_state"
+                    />
 
-                <Button
+                <ImageButton
                     android:id="@+id/blueTeam"
                     android:layout_marginStart="10dp"
-                    android:layout_width="400px"
-                    android:layout_height="400px"/>
+                    android:layout_width="340px"
+                    android:layout_height="340px"
+                    android:backgroundTint="@android:color/transparent"
+                    app:srcCompat="@drawable/blue_button_state"/>
 
             </LinearLayout>
 
@@ -51,7 +56,7 @@
                 android:layout_width="247dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
                 app:srcCompat="@drawable/next_button_state" />
 
