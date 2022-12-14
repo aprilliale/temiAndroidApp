@@ -37,7 +37,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:background="@null"
+                android:backgroundTint="@android:color/transparent"
                 app:srcCompat="@drawable/next_button_state" />
 
         </LinearLayout>

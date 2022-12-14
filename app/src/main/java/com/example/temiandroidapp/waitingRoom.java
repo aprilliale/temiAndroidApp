@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class waitingRoom extends AppCompatActivity {
 
+    ImageButton play;
 
 
     @Override
@@ -16,6 +18,20 @@ public class waitingRoom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting_room);
 
+        playClickListener();
+
+    }
+
+    private void playClickListener() {
+        play = findViewById(R.id.buttonPlay);
+
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(waitingRoom.this, playingRoom.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override

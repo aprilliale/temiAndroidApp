@@ -52,7 +52,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonPlay"
                 android:layout_width="247dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

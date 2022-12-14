@@ -3,22 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/backward_button_state.xml" value="0.2055" />
         <entry key="app/src/main/res/drawable/blue_button_state.xml" value="0.2235" />
         <entry key="app/src/main/res/drawable/connect_button_state.xml" value="0.223" />
+        <entry key="app/src/main/res/drawable/down_button_state.xml" value="0.2235" />
         <entry key="app/src/main/res/drawable/exit_button_state.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/forward_button_state.xml" value="0.2055" />
         <entry key="app/src/main/res/drawable/layout_background.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/left_button_state.xml" value="0.2235" />
         <entry key="app/src/main/res/drawable/next_button_state.xml" value="0.231" />
         <entry key="app/src/main/res/drawable/red_button_state.xml" value="0.2235" />
+        <entry key="app/src/main/res/drawable/right_button_state.xml" value="0.2235" />
         <entry key="app/src/main/res/drawable/setting_button_state.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/shot_button_state.xml" value="0.2055" />
         <entry key="app/src/main/res/drawable/start_button_state.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/up_button_state.xml" value="0.2235" />
         <entry key="app/src/main/res/layout-land/activity_connect_temi.xml" value="0.21464793298657903" />
         <entry key="app/src/main/res/layout-land/activity_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout-land/activity_login.xml" value="0.21075837742504408" />
-        <entry key="app/src/main/res/layout-land/activity_playing_room.xml" value="0.21075837742504408" />
+        <entry key="app/src/main/res/layout-land/activity_playing_room.xml" value="0.38990301834909546" />
         <entry key="app/src/main/res/layout-land/activity_splashscreen.xml" value="0.25144439697265625" />
         <entry key="app/src/main/res/layout-land/activity_waiting_room.xml" value="0.13430421482738783" />
         <entry key="app/src/main/res/layout-land/list_temi.xml" value="0.25616446331048465" />
-        <entry key="app/src/main/res/layout-land/playing_room_overlay.xml" value="0.21075837742504408" />
+        <entry key="app/src/main/res/layout-land/playing_room_overlay.xml" value="0.1981735229492187" />
         <entry key="app/src/main/res/layout-sw600dp/activity_main.xml" value="0.11782786885245902" />
         <entry key="app/src/main/res/layout/activity_connect_temi.xml" value="0.23550724637681159" />
         <entry key="app/src/main/res/layout/activity_layout.xml" value="0.15625" />
