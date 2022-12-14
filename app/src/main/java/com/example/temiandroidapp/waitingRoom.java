@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class waitingRoom extends AppCompatActivity {
 
-    ImageButton play;
+    ImageButton blue, red;
 
 
     @Override
@@ -18,14 +18,26 @@ public class waitingRoom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting_room);
 
-        playClickListener();
-
+        blueplayClickListener();
+        redplayClickListener();
     }
 
-    private void playClickListener() {
-        play = findViewById(R.id.buttonPlay);
+    private void redplayClickListener() {
+        red = findViewById(R.id.redTeam);
 
-        play.setOnClickListener(new View.OnClickListener() {
+        red.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(waitingRoom.this, playingRoom.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    private void blueplayClickListener() {
+        blue = findViewById(R.id.blueTeam);
+
+        blue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(waitingRoom.this, playingRoom.class);
