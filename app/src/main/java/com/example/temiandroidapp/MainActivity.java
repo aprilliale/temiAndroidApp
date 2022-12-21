@@ -1,27 +1,81 @@
 package com.example.temiandroidapp;
 
+import static android.view.Gravity.*;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageButton startButton, settingButton,exitButton;
+    Dialog popUp;
+    Button musicButton, closePopup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(R.layout.activity_layout);
+
+        //pop-up setting
+        popUp = new Dialog(MainActivity.this);
+        popUp.setContentView(R.layout.popup_setting);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1){
+            popUp.getWindow().setBackgroundDrawable(getDrawable(R.drawable.popup_background));
+        }
+
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+
+        lp.copyFrom(popUp.getWindow().getAttributes());
+        lp.width = 900;
+        lp.height = 500;
+        popUp.getWindow().setAttributes(lp);
+
+        //popUp.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        popUp.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+        musicButton = popUp.findViewById(R.id.soundON);
+        closePopup = popUp.findViewById(R.id.closePopup);
+
+        musicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "music on", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        closePopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+                popUp.dismiss();
+            }
+        });
+
+        settingButton = findViewById(R.id.settingButton);
+        settingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popUp.show();
+            }
+        });
 
         addListenerOnButton(); //button function
     }
@@ -30,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
     private void addListenerOnButton() {
 
         startButton = findViewById(R.id.startButton);
-        settingButton = findViewById(R.id.settingButton);
         exitButton = findViewById(R.id.exitButton);
 
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -41,12 +94,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        settingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "this is setting", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override

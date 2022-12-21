@@ -25,6 +25,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="150px"
             app:srcCompat="@drawable/logo" />
+
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
