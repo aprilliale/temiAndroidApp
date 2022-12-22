@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         popUp.getWindow().getAttributes().windowAnimations = R.style.animation;
 
-        musicButton = popUp.findViewById(R.id.soundON);
+        musicButton = popUp.findViewById(R.id.buttonOn);
         closePopup = popUp.findViewById(R.id.closePopup);
 
         musicButton.setOnClickListener(new View.OnClickListener() {

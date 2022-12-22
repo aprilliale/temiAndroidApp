@@ -54,31 +54,65 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:stateListAnimator="@null"
-            android:textAllCaps="true"
-            />
+            android:textAllCaps="true" />
 
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linearLay2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLay"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
 
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="Turn music on"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/bOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:stateListAnimator="@null"
+            android:text="On"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/closePopup"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:background="@android:color/transparent"
         android:stateListAnimator="@null"
         android:text="Cancel"
         android:textAllCaps="false"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLay" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLay2" />
 
 
 
