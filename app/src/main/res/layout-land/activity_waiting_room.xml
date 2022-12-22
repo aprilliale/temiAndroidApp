@@ -22,7 +22,7 @@
         android:id="@+id/helpButton"
         android:layout_width="63dp"
         android:layout_height="60dp"
-        android:layout_marginStart="628dp"
+        android:layout_marginStart="798dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"

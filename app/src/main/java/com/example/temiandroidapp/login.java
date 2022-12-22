@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class login extends AppCompatActivity {
 
-    ImageButton nextLogin;
+    ImageButton nextLogin, backButton;
     EditText insertIP;
 
     @Override
@@ -21,6 +21,19 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         loginButtonListener();
+        backButtonListener();
+    }
+
+    private void backButtonListener() {
+        backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(login.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void loginButtonListener() {

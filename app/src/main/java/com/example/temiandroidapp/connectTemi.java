@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class connectTemi extends AppCompatActivity {
     TextView idNum;
-    ImageButton nextbutton;
+    ImageButton nextbutton, backPrevScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,19 @@ public class connectTemi extends AppCompatActivity {
         idNum.setText(ipNum+" Please select your team!");
 
         nextButtonOnListener();
+        backplayClickListener();
+    }
+
+    private void backplayClickListener() {
+        backPrevScreen = findViewById(R.id.backButton);
+
+        backPrevScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(connectTemi.this, login.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void nextButtonOnListener() {

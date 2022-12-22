@@ -43,23 +43,24 @@ public class MainActivity extends AppCompatActivity {
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
 
         lp.copyFrom(popUp.getWindow().getAttributes());
-        lp.width = 900;
-        lp.height = 500;
+        lp.width = 950;
+        lp.height = 700;
         popUp.getWindow().setAttributes(lp);
 
-        //popUp.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        //popUp.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         popUp.getWindow().getAttributes().windowAnimations = R.style.animation;
 
-        musicButton = popUp.findViewById(R.id.buttonOn);
+        //musicButton = popUp.findViewById(R.id.buttonOn);
         closePopup = popUp.findViewById(R.id.closePopup);
 
-        musicButton.setOnClickListener(new View.OnClickListener() {
+        /*musicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "music on", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         closePopup.setOnClickListener(new View.OnClickListener() {
             @Override

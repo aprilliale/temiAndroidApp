@@ -7,6 +7,17 @@
     android:background="@drawable/background_2"
     tools:context=".connectTemi">
 
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button_state" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -14,138 +25,84 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
-                android:layout_width="600dp"
-                android:layout_height="350dp"
+                android:id="@+id/layoutlists"
+                android:layout_width="466dp"
+                android:layout_height="297dp"
                 android:background="@drawable/layout_background"
-                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textSetUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:textSize="20sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
                     android:gravity="center"
-                    android:text="Please select Temi!" />
+                    android:text="Please select Temi!"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearTemi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textSetUp">
+
+                    <TextView
+                        android:id="@+id/GetTemiName1"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="#00FFFFFF">
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="236dp"
+                        android:text="Temi Name"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/buttonConnect1"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/GetTemiName1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="40dp"
-                            android:text="Temi Name"
-                            android:textSize="20sp" />
-
-                        <ImageButton
-                            android:id="@+id/buttonConnect1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="300dp"
-                            app:srcCompat="@drawable/connect_button_state"
-                            tools:ignore="SpeakableTextPresentCheck"
-                            android:backgroundTint="@android:color/transparent"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageButton
+                        android:id="@+id/buttonConnect1"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="#00FFFFFF">
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@android:color/transparent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/connect_button_state"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
-                        <TextView
-                            android:id="@+id/GetTemiName2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="40dp"
-                            android:text="Temi Name"
-                            android:textSize="20sp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <ImageButton
-                            android:id="@+id/buttonConnect2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="300dp"
-                            app:srcCompat="@drawable/connect_button_state"
-                            tools:ignore="SpeakableTextPresentCheck"
-                            android:backgroundTint="@android:color/transparent"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:foregroundGravity="bottom">
 
-                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/nextButton"
+                        android:layout_width="466dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="132dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/next_button_state"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="#00FFFFFF">
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <TextView
-                            android:id="@+id/GetTemiName3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="40dp"
-                            android:text="Temi Name"
-                            android:textSize="20sp" />
-
-                        <ImageButton
-                            android:id="@+id/buttonConnect3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="300dp"
-                            app:srcCompat="@drawable/connect_button_state"
-                            tools:ignore="SpeakableTextPresentCheck"
-                            android:backgroundTint="@android:color/transparent"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="#00FFFFFF">
-
-                        <TextView
-                            android:id="@+id/GetTemiName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="40dp"
-                            android:text="Temi Name"
-                            android:textSize="20sp" />
-
-                        <ImageButton
-                            android:id="@+id/buttonConnect"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="300dp"
-                            app:srcCompat="@drawable/connect_button_state"
-                            tools:ignore="SpeakableTextPresentCheck"
-                            android:backgroundTint="@android:color/transparent"/>
-
-                    </LinearLayout>
-
-
-                <ImageButton
-                    android:id="@+id/nextButton"
-                    android:layout_width="247dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:background="@null"
-                    app:srcCompat="@drawable/next_button_state"
-                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
-
 
 
         </RelativeLayout>
