@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class waitingRoom extends AppCompatActivity {
 
-    ImageButton blue, red;
+    ImageButton blue, red, backPrevScreen;
 
 
     @Override
@@ -20,6 +20,19 @@ public class waitingRoom extends AppCompatActivity {
 
         blueplayClickListener();
         redplayClickListener();
+        backplayClickListener();
+    }
+
+    private void backplayClickListener() {
+        backPrevScreen = findViewById(R.id.backButton);
+
+        backPrevScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(waitingRoom.this, connectTemi.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void redplayClickListener() {

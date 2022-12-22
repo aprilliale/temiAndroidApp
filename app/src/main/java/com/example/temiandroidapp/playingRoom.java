@@ -10,7 +10,7 @@ public class playingRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.playing_room_overlay);
+        setContentView(R.layout.activity_playing_room);
     }
 
 
