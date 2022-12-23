@@ -6,129 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".playingRoom">
 
-    <LinearLayout
+
+    <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="220dp"
-        android:gravity="bottom"
-        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/upButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/up_button_state" />
+        <TableRow>
 
-        <ImageButton
-            android:id="@+id/downButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/down_button_state" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/up_button_state"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:layout_span="3"/>
 
-    </LinearLayout>
+        </TableRow>
 
-    <LinearLayout
+        <TableRow>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@android:color/transparent"
+                android:src="@drawable/left_button_state"
+                tools:ignore="SpeakableTextPresentCheck"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:clickable="false"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:text="playy" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:background="@android:color/transparent"
+                android:src="@drawable/right_button_state"
+                tools:ignore="SpeakableTextPresentCheck"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:background="@android:color/transparent"
+                android:src="@drawable/down_button_state"
+                android:layout_span="3"
+                tools:ignore="SpeakableTextPresentCheck"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="270dp"
-        android:gravity="bottom"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
-            android:id="@+id/leftButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/left_button_state" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-        <ImageButton
-            android:id="@+id/rightButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/right_button_state" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="270dp"
-        android:gravity="bottom"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/forwardButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/left_button_state" />
-
-        <ImageButton
-            android:id="@+id/backwardButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/right_button_state" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="690dp"
-        android:layout_marginTop="300dp"
-        android:gravity="bottom"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/walkingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/forward_button_state" />
-
-        <ImageButton
-            android:id="@+id/walkingbackButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/backward_button_state" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="732dp"
-        android:layout_marginTop="230dp"
-        android:gravity="bottom"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/shotButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/shot_button_state" />
-
-    </LinearLayout>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
