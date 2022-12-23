@@ -8,7 +8,7 @@
 
 
     <TableLayout
-        android:id="@+id/tableLayout"
+        android:id="@+id/tableLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -19,6 +19,7 @@
         <TableRow>
 
             <ImageButton
+                android:id="@+id/buttonUP"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -31,6 +32,7 @@
 
         <TableRow>
             <ImageButton
+                android:id="@+id/buttonLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -39,16 +41,16 @@
                 tools:ignore="SpeakableTextPresentCheck"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <View
+                android:layout_width="30dp"
+                android:layout_height="0dp"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:clickable="false"
-                tools:ignore="SpeakableTextPresentCheck"
-                android:text="playy" />
+                tools:ignore="SpeakableTextPresentCheck"/>
 
             <ImageButton
+                android:id="@+id/buttonRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -78,18 +80,40 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="1dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <TableRow>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/shot_button_state"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:layout_span="2"/>
+        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <TableRow>
+            <ImageButton
+                android:id="@+id/buttonForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:background="@android:color/transparent"
+                android:src="@drawable/forward_button_state"
+                tools:ignore="SpeakableTextPresentCheck"/>
+            <ImageButton
+                android:id="@+id/buttonBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:background="@android:color/transparent"
+                android:src="@drawable/backward_button_state"
+                tools:ignore="SpeakableTextPresentCheck"/>
+        </TableRow>
 
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
