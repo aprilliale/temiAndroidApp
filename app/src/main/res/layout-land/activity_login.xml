@@ -17,46 +17,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_button_state" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="160dp"
-            android:background="@drawable/layout_background"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Please input IP number"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+        <EditText
+            android:id="@+id/insertName"
+            android:layout_width="200dp"
+            android:layout_marginTop="5dp"
+            android:text="Name"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
 
-            <EditText
-                android:id="@+id/insertIP"
-                android:layout_width="200dp"
-                android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/insertIP"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="IP"
+            android:minHeight="48dp" />
 
-            <ImageButton
-                android:id="@+id/buttonLogin"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="@android:color/transparent"
-                app:srcCompat="@drawable/next_button_state" />
+        <ImageButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/next_button_state" />
 
-        </LinearLayout>
-
-
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

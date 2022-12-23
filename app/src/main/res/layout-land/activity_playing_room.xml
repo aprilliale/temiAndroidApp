@@ -65,6 +65,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:id="@+id/buttonDown"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="top"
@@ -87,6 +88,7 @@
 
         <TableRow>
             <ImageButton
+                android:id="@+id/buttonShot"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
