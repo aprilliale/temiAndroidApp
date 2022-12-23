@@ -36,7 +36,7 @@ public class waitingRoom extends AppCompatActivity {
     }
 
     private void redplayClickListener() {
-        red = findViewById(R.id.redTeam);
+        red = findViewById(R.id.chooseRedTeam);
 
         red.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +48,7 @@ public class waitingRoom extends AppCompatActivity {
     }
 
     private void blueplayClickListener() {
-        blue = findViewById(R.id.blueTeam);
+        blue = findViewById(R.id.chooseBlueTeam);
 
         blue.setOnClickListener(new View.OnClickListener() {
             @Override
